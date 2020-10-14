@@ -1,0 +1,43 @@
+<p>user-form works!</p>
+
+<div class="col-md-6">
+    <form [formGroup] = "multiForm">
+        <div *ngIf="currentStep === 1">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+            </div>
+            
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+            </div>
+    
+            <div class="form-group">
+                <label for="sopraEmail">Sopra Email:</label>
+                <input type="email" formControlName="sopraEmail" placeholder="Sopra Email" name="sopraEmail" class="form-control" id="sopraEmail">
+            </div>
+    
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="text" formControlName="contactNumber" placeholder="Contact Number" name="contactNumber" class="form-control" id="contactNumber">
+            </div>
+
+            <button (click) = "next($event, multiForm.value)">Next</button>
+        </div>
+
+        <div *ngIf="currentStep === 2">
+            <div class="form-group">
+                <label for="interests">Interests:</label>
+                <input type="text" formControlName="interests" placeholder="Interests" name="interests" class="form-control" id="interests">
+              </div>
+      
+            <div class="form-group">
+                <label for="joiningDate">Joining Date:</label>
+                <input type="text" formControlName="joiningDate" placeholder="Joining Date" name="joiningDate" class="form-control" id="joiningDate">
+            </div>
+
+            <button (click)="next($event, multiForm.value)">Next</button>
+        </div>
+    </form>
+</div>

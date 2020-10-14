@@ -1,0 +1,27 @@
+<div class="col-md-6">
+    <h2>User Details</h2>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>*</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>SopraEmail</th>
+                <th>ContactNumber</th>
+                <th>Interests</th>
+                <th>JoiningDate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName  }}</td>
+                <td>{{ user.sopraEmail }}</td>
+                <td>{{ user.contactNumber }}</td>
+                <td>{{ user.interests }}</td>
+                <td>{{ user.joiningDate }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
